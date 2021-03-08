@@ -12,6 +12,8 @@
                 <hr4>Registre-se e começe a comprar hoje mesmo</hr4>
                 <hr />
 
+                <vc:summary></vc:summary>
+
                 <div class="form-group">
                     <label asp-for="Email"></label>
                     <input asp-for="Email" class="form-control" />
@@ -24,7 +26,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="SenhaConfirmacao"></label>
-                    <input  type="password" asp-for="SenhaConfirmacao" class="form-control" />
+                    <input type="password" asp-for="SenhaConfirmacao" class="form-control" />
                     <span asp-validation-for="SenhaConfirmacao" class="text-danger"></span>
                 </div>
 

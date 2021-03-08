@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using NSE.WebApp.MVC.Models;
+using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -6,7 +7,7 @@ using static NSE.WebApp.MVC.Models.UsuarioViewModel;
 
 namespace NSE.WebApp.MVC.Services
 {
-    public class AutenticacaoService : IAutenticacaoService
+    public class AutenticacaoService : Service, IAutenticacaoService
     {
         private readonly HttpClient _httpClient;
 
@@ -28,6 +29,15 @@ namespace NSE.WebApp.MVC.Services
             {
                 PropertyNameCaseInsensitive = true
             };
+
+            if (!TratarErrosReponse(response))
+            {
+                return new UsuarioRespostaLogin
+                {
+                    ResponseResult =
+                        JsonSerializer.Deserialize<ResponseResult>(await response.Content.ReadAsStringAsync(), options)
+                };
+            }
             
             return JsonSerializer.Deserialize<UsuarioRespostaLogin>(await response.Content.ReadAsStringAsync(), options);
         }
@@ -45,6 +55,15 @@ namespace NSE.WebApp.MVC.Services
             {
                 PropertyNameCaseInsensitive = true
             };
+
+            if (!TratarErrosReponse(response))
+            {
+                return new UsuarioRespostaLogin
+                {
+                    ResponseResult =
+                        JsonSerializer.Deserialize<ResponseResult>(await response.Content.ReadAsStringAsync(), options)
+                };
+            }
 
             return JsonSerializer.Deserialize<UsuarioRespostaLogin>(await response.Content.ReadAsStringAsync(), options);
         }
