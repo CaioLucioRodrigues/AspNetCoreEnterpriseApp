@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using static NSE.WebApp.MVC.Models.UsuarioViewModel;
+﻿using NSE.WebApp.MVC.Models;
+using System.Threading.Tasks;
 
 namespace NSE.WebApp.MVC.Services
 {
