@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSE.Catalogo.API.Data;
+using NSE.WebAPI.Core.Identity;
 
 namespace NSE.Catalogo.API.Configuration
 {
@@ -17,14 +18,14 @@ namespace NSE.Catalogo.API.Configuration
 
             services.AddControllers();
 
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy("Total", builder =>
-            //        builder
-            //            .AllowAnyOrigin()
-            //            .AllowAnyMethod()
-            //            .AllowAnyHeader());
-            //});
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Total", builder =>
+                    builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
 
             return services;
         }
@@ -40,7 +41,9 @@ namespace NSE.Catalogo.API.Configuration
 
             app.UseRouting();
 
-            //app.UseCors("Total");            
+            app.UseCors("Total");
+
+            app.UseAuthConfiguration();
 
             app.UseEndpoints(endpoints =>
             {
