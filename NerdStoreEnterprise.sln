@@ -32,6 +32,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Catalogo.API", "src\services\NSE.Catalogo.API\NSE.Catalogo.API\NSE.Catalogo.API.csproj", "{F4C7E512-C33A-4ED4-9234-F939C8832B2D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cliente", "Cliente", "{D43A0A75-80B8-4234-B8EE-A45BBB2FBEC8}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\caior\AppData\Local\Temp\Rar$DRa21240.37044\src\services\NSE.Clientes.API\appsettings.Development.json = C:\Users\caior\AppData\Local\Temp\Rar$DRa21240.37044\src\services\NSE.Clientes.API\appsettings.Development.json
+		C:\Users\caior\AppData\Local\Temp\Rar$DRa21240.37044\src\services\NSE.Clientes.API\appsettings.json = C:\Users\caior\AppData\Local\Temp\Rar$DRa21240.37044\src\services\NSE.Clientes.API\appsettings.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Cliente.API", "src\services\NSE.Cliente.API\NSE.Cliente.API\NSE.Cliente.API.csproj", "{B2DE7ECC-E6BE-4AF7-B140-E99D00E25DBE}"
 EndProject
@@ -45,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Pedido.API", "src\servi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B6D57CC4-1522-450A-9ED5-AF4FE8605443}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.WebAPI.Core", "NSE.WebAPI.Core\NSE.WebAPI.Core.csproj", "{8D398C67-894E-497F-A59A-8DEA61BD1101}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.WebAPI.Core", "NSE.WebAPI.Core\NSE.WebAPI.Core.csproj", "{8D398C67-894E-497F-A59A-8DEA61BD1101}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
